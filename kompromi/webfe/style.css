@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 30px 70px;
+    font-family: sans-serif;
+}
+.container{
+    width: 100%;
+    box-shadow: 0 15px 15px 10px rgba(0, 0, 0, 0.2);
+}
+header{
+    display: flex;
+    padding: 50px;
+    background-color: royalblue;
+    transition: 0.4s;
+}
+header:hover{
+    background-color: rgb(37, 61, 133);
+}
+img{
+    width: 250px;
+    height: 250px;
+}
+header .right {
+    margin-left: 40px;
+    position: relative;
+    width: 100%;
+    color: white;
+}
+.right a{
+    color: white;
+    text-decoration: none;
+}
+.right a:hover{
+    text-decoration: underline;
+}
+.contact {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.contact i{
+    margin: 0 5px;
+}
+.penanda{
+    background-color: rgb(230, 227, 227);
+    padding: 20px 50px;
+    margin-top: 20px;
+    color: royalblue;
+    transition: 0.4s;
+}
+.penanda:hover{
+    color: rgb(230, 227, 227);
+    background-color: royalblue;
+}
+.card{
+    padding: 0 50px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.card .info{
+    width: 350px;
+}
+.card .left{
+    width: 100%;
+}
+.card .right{
+    width: 100%;
+}
+.card .right .skill{
+    display: flex;
+}
+.card .left .skill{
+    display: flex;
+}
+.card .skill h3{
+    margin-right: 150px;
+}
