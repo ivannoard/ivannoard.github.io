@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <title>IDChamp - Submission 1</title>
+</head>
+<body>
+    
+    <header id="header">
+        <div class="left">
+            <span class="fas fa-bars" id="side-btn"></span>
+            <div class="logo">IDChamp <span>Submission 1</span></div>
+        </div>
+
+        <div class="right">
+            <form action="" class="search">
+                <input type="search" placeholder="Search...">
+                <button type="submit" onclick="myClick()"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </header>
+
+    <nav id="side-menu">
+        <ul>
+            <li><a href="#"><span><i class="fas fa-desktop"></i></span>Dashboard</a></li>
+            <li><a href="#"><span><i class="fas fa-user-alt"></i></span>Profile</a></li>
+            <li><a href="#"><span><i class="fas fa-cog"></i></span>Settings</a></li>
+            <li><a href="#"><span><i class="fas fa-book"></i></span>About</a></li>
+            <li><a href="#"><span><i class="fas fa-info-circle"></i></span>Info</a></li>
+        </ul>
+    </nav>
+
+    <main id="main">
+        <div class="jumbotron" >
+            <div class="title">
+                <h2>Tonton Film Favorit Kamu!</h2>
+                <p>Situs streaming film terpercaya untuk anda</p>
+            </div>
+        </div>
+        
+        <div class="row">
+
+            <div class="heading">
+                <h3><i class="fas fa-play"></i> Now Playing</h3> 
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <img src="assets/conjuring3.jpg" alt="the-conjuring-3">
+                    <div class="watch">
+                        <p><a href="">Watch Now</a></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/cruella.jpg" alt="cruella">
+                    <div class="watch">
+                        <p><a href="">Watch Now</a></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/qp2.jpg" alt="quiet-place-2">
+                    <div class="watch">
+                        <p><a href="">Watch Now</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 50px;">
+
+            <div class="heading">
+                <h3><i class="fas fa-bullhorn"></i> Upcoming</h3>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <img src="assets/old.jpg" alt="old">
+                    <div class="watch">
+                        <p><a href="">Watch Now</a></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/luca.jpg" alt="luca">
+                    <div class="watch">
+                        <p><a href="">Watch Now</a></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/eternals.jpg" alt="the-eternals">
+                    <div class="watch">
+                        <p><a href="">Watch Now</a></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/jungle-cruise.jpg" alt="jungle-cruise">
+                    <div class="watch">
+                        <p><a href="">Watch Now</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Made With <span><i class="fas fa-heart"></i></span> by ivannoard</p>
+    </footer>
+
+    <script>
+        const sideButton = document.querySelector('#side-btn');
+        const sideMenu = document.querySelector('#side-menu');
+        const menu = document.querySelector('#main');
+        const header = document.querySelector('#header')
+        sideButton.addEventListener('click', ()=>{
+            sideMenu.classList.toggle('show');
+            menu.classList.toggle('resize');
+        })
+
+        function myClick(){
+            alert('Fitur Belum Tersedia');
+        }
+    </script>
+
+</body>
+</html>
