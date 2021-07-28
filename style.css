@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 *{
     padding: 0;
     margin: 0;
@@ -5,7 +8,6 @@
 }
 body{
     font-family: sans-serif;
-    scroll-behavior: smooth;
 }
 .container{
     display: grid;
@@ -15,12 +17,15 @@ body{
 }
 aside{
     grid-area: aside;
-    margin-right: 10px;
-    padding: 15px 0 0 10px;
-
+    margin-right: 0px;
+    padding: 15px 10px 0 10px;
+    position: fixed;
+    height: 100vh;
+    /* z-index: -1; */
+    background-color: white;
 }
 aside .image{
-    background-color: gray;
+    background-color: #bccad0;
     border-radius: 50%;
     width: 150px;
     height: 150px;
@@ -44,16 +49,16 @@ nav ul li a{
     padding: 15px 20px 15px 20px;
     text-decoration: none;
     font-weight: 550;
-    color: rgb(21, 21, 21);
+    color: 	#495054;
     /* background-color: indigo; */
     margin-bottom: 5px;
     text-align: left;
     border-left: 8px solid transparent;
-    transition: 0.6s;
+    transition: 0.2s;
     /* transform: translateX(0); */
 }
 nav ul li a:hover{
-    border-left: 8px solid rgb(21, 21, 21);
+    border-left: 8px solid 	#495054;
     background-color: #c0c2c4;
     /* text-align: right; */
     /* transform: translateX(100px); */
@@ -61,12 +66,14 @@ nav ul li a:hover{
 main{
     grid-area: main;
     padding: 0 15px;
-    border-left: 3px solid grey;
+    border-left: 3px solid #e3e8ea;
     transition: 0.4s;
+    margin-left: 225px;
+    /* position: relative; */
     /* height: 100vh; */
 }
 main:hover{
-    border-left: 3px solid rgb(21, 21, 21);
+    border-left: 3px solid 	#495054;
 }
 main section{
     padding: 15px 0;
@@ -84,32 +91,82 @@ main section{
     border-radius: 5px;
 }
 .card .image{
-    background-color: gray;
+    background-color: #bccad0;
     width: 100%;
     height: 150px;
     margin: 0 auto;
 }
+img{
+    width: 100%;
+    height: 150px;
+    transition: 0.4s;
+}
+img:hover{
+    transform: scale(2,2);
+}
 .card .card-info{
     text-align: center;
     padding: 20px;
+    line-height: 30px;
 }
 .card a{
-    background-color: rosybrown;
+    background-color: 	#495054;
     width: 100%;
     display: block;
     padding: 10px;
     text-align: center;
     text-decoration: none;
     font-weight: 300;
+    color: #c0c2c4;
 }
-
-
 
 footer{
     grid-area: footer;
-    background-color: rgb(21, 21, 21);
+    background-color: 	#495054;
     padding: 10px;
     text-align: center;
     color: #c0c2c4;
     margin-top: 5px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* RESPONSIVE BREAKPOINT */
+/* MOBILE */
+@media screen and (max-width:768px) {
+    .container{
+        grid-template-areas: 
+        "main"
+        "footer";
+    }
+    aside{
+        display: none;
+        margin-right: 0;
+    }
+    main{
+        border-left: none;
+        padding: 20px;
+        margin-left: 0;
+    }
+    main:hover{
+        border-left: none;
+    }
+    .my-projects{
+        width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(125px,1fr) );
+        gap: 20px;
+        margin: 0 auto;
+    }
+    .card{
+        box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 3px;
+    }
+    .card .card-info{
+        text-align: center;
+        padding: 0;
+        margin: 20px 0;
+    }
 }
