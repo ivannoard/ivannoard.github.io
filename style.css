@@ -59,7 +59,7 @@ nav ul li a{
 }
 nav ul li a:hover{
     border-left: 8px solid 	#495054;
-    background-color: #c0c2c4;
+    background-color: #e3e8ea;
     /* text-align: right; */
     /* transform: translateX(100px); */
 }
@@ -119,6 +119,9 @@ img:hover{
     font-weight: 300;
     color: #c0c2c4;
 }
+
+/* Content */
+
 
 footer{
     grid-area: footer;
