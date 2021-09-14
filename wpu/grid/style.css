@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100%;
+}
+body{
+    background-color: #ddd;
+    font-family: 'oswald', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 50px;
+}
+
+.container{
+    display: grid;
+    gap: 10px;
+}
+
+
+/* Header */
+header{
+    display: grid;
+    grid-template-areas: 
+        'hero hero feature-1'
+        'hero hero feature-2';
+    gap: 10px;
+}
+.hero{
+    grid-area: hero;
+    min-height: 300px;
+    background-color: brown;
+    padding: 50px;
+    display: grid;
+    /* place-content: center; */
+}
+.hero > *{
+    /* display: none; */
+}
+.features{
+    background-color: cadetblue;
+    color: white;
+    display: grid;
+    /* align-content: center;
+    justify-content: center; */
+    place-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+.feature-1{
+    grid-area: feature-1;
+    background-color: teal;
+}
+.feature-2{
+    grid-area: feature-2;
+    background-color: wheat;
+}
+.features .price{
+    font-size: 2em;
+    font-weight: 200;
+}
+
+/* Navigation */
+.menu{
+    order: -1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+.menu .brand{
+    font-size: 1.2em;
+    color: #333;
+}
+.menu ul{
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    gap: 10px;
+}
+.menu ul li a{
+    display: block;
+    background-color: #333;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+/* Hamburger Menu */
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 18px;
+    justify-content: space-between;
+    position: relative;
+}
+.menu-toggle input{
+    position: absolute;
+    width: 48px;
+    height: 25px;
+    left: -10px;
+    top: -3px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+}
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+/* Hamburger animate */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    background-color: white;
+    transform: rotate(45deg) translate(-2.5px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: scale(0);
+}
+
+/* Services */
+.services{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 10px;
+}
+.service{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+}
+
+.gallery{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 10px;
+}
+.gallery h2{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Responsive Breakpoint */
+
+/* Wide Screen (FHD)*/
+@media (max-width:1024px){
+    .menu{
+        order: inherit;
+        grid-template-columns: 1fr;
+    }
+    .menu .brand{
+        display: none;
+    }
+    .hero > *{
+        display: block;
+        color: white;
+        margin-bottom: 5px;
+    }
+    .hero{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+}
+
+/* Tablet Screen */
+@media (max-width:768px){
+    .menu{
+        order: -1;
+        justify-items: end;
+        z-index: 1;
+    }
+    .menu ul{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        justify-content: space-evenly;
+        background-color: #333;
+        align-items: center;
+        z-index: -1;
+        transform: translateY(-100%);
+        transition: 1s;
+        opacity: 0.9;
+    }
+    .menu ul.slide{
+        transform: translateY(0);
+    }
+    .menu-toggle{
+        display: flex;
+    }
+}
+/* Mobile Screen */
+@media (max-width:650px){
+    body{
+        margin: 15px;
+    }
+    header{
+        grid-template-areas: 
+            'hero'
+            'feature-1'
+            'feature-2';
+    }
+}
