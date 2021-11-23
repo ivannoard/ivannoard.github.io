@@ -1,0 +1,80 @@
+@font-face{
+  font-family: Outfit;
+  src: url('https://fonts.google.com/specimen/Outfit');
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+p{
+  font-size: 18px;
+}
+p, h2{
+  color: hsl(0, 0%, 100%);
+}
+body{
+  width: 1440px;
+  background-color: hsl(217, 54%, 11%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card{
+  background-color: hsl(216, 50%, 16%);
+  width: 350px;
+  height: 580px;
+  border-radius: 15px;
+  padding: 20px;
+}
+.card-header{
+  width: 100%;
+  margin-bottom: 20px;
+}
+.card-header img{
+  width: 100%;
+  border-radius: 8px;
+}
+.card-body .heading, .sub-heading{
+  margin-bottom: 20px;
+}
+.sub-heading p{
+  color: hsl(215, 51%, 70%);
+}
+.info{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+.coin, .days{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.coin p{
+  color: hsl(178, 100%, 50%);
+  margin-left: 7px;
+}
+.days p{
+  color: hsl(215, 51%, 70%);
+  margin-left: 7px;
+}
+.person{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.person img{
+  width: 30px;
+  margin-right: 10px;
+}
+.person span{
+  font-weight: 600;
+}
+@media screen and (max-width: 375px) {
+  body{ 
+    width: 100%;
+  }
+}
