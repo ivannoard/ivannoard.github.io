@@ -1,0 +1,104 @@
+h3{
+  color: rgb(237, 201, 151);
+}
+p, label{
+    color: rgb(200, 195, 188);
+}
+.fab a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aqua;
+  padding: 30px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.btn-primary{
+  background-color: rgb(237, 201, 151);
+  border: none;
+  color: #090a0a;
+}
+.btn-primary:hover{
+  background-color: rgb(200, 195, 188);
+}
+.btn-primary:active,.btn-primary:visited{
+  background-color: none;
+}
+body{
+  background-color: #090a0a;
+  position: relative;
+}
+.navbar{
+  background-color: #090a0a;
+}
+nav a, ul li a.nav-link{
+  color:  rgb(237, 201, 151);
+  /* color:  rgb(200, 195, 188); */
+}
+nav ul li a.nav-link:hover{
+  color:  rgb(200, 195, 188);
+}
+.jumbotron .container{
+  /* height: 50vh; */
+  margin-top: 100px;
+  /* background-color: aqua; */
+}
+.jumbotron .social-media span{
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.jumbotron img{
+  margin: 0 auto;
+  width: 250px;
+  height: 250px;
+}
+section{
+  margin-bottom: 100px;
+}
+#projects .container .col-md-4 .card{
+  margin-bottom: 30px;
+}
+@media screen and (max-width:500px) {
+  .jumbotron{
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
+  .jumbotron .container {
+    margin-top: 10px;
+  }
+  .jumbotron .container .row{
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .jumbotron .container .social-media {
+    justify-content: center;
+  }
+  .jumbotron .container img{
+    width: 170px;
+    height: 170px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width:768px){
+  .jumbotron .container .row{
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .jumbotron .container .social-media {
+    justify-content: center;
+  }
+  .jumbotron .container img{
+    margin-bottom: 20px;
+  }
+}
+.header-hover{
+  transition: 0.2s ease-in;
+  margin-top: -80px;
+}
+.header-hover:hover{
+  background: #000;
+}
