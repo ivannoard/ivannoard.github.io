@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <header class="header" id="header">
+      <h1>Todo List App</h1>
+      <p>Mini Project for Javascript Knowledge</p>
+    </header>
+
+    <main class="main">
+      <div class="top">
+        <div class="add">
+          <form id="additem">
+            <label for="addform">
+              Add Your Schedule
+            </label><br>
+            <input type="text" name="addform" id="addform"> <br>
+            <input type="submit" name="addbtn" value="Submit">
+          </form>
+        </div>
+        <div class="search">
+
+          <label for="searchbtn">Search</label> <br>
+          <input type="text" name="searchbtn" id="search">
+
+        </div>
+      </div>
+      <div class="data">
+        <h3>Your List</h3>
+        <table>
+          <tbody id="todotable">
+            <tr>
+              <!-- Javascript Create DOM -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>
