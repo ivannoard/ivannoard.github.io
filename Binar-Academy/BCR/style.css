@@ -73,6 +73,7 @@ html{
 .jumbotron-image{
   width: 50%;
 }
+
 /* .jumbotron-image img{
   width: 100%;
 } */
@@ -301,6 +302,10 @@ html{
     transform: translateY(0);
     margin-top: 30px;
   }
+  .jumbotron-image img{
+    width: 100%;
+    margin-top: 16px;
+  }
   .hide{
     transform: translateY(-100%);
   }
@@ -445,6 +450,10 @@ html{
   .jumbotron h2{
     font-size: 36px;
     line-height: 54px;
+  }
+  .jumbotron-image img{
+    width: 740px;
+    margin-top: 0;
   }
   .service-content{
     padding: 0;
